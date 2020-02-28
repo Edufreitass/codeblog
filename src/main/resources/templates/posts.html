@@ -29,7 +29,8 @@
 						<span th:text=${post.data}></span>
 					</p>
 					
-					<a href"#"><h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;">
+					<!-- <a th:href="${(#mvc.url('CC#getPostDetails').arg(0, post.id)).build()}"> -->
+					 <a th:href="@{'/posts/' + ${post.id}}" ><h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;">
 						<span th:text="${post.titulo}"></span>
 					</h4></a>
 					
